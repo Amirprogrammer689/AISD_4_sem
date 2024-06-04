@@ -5,13 +5,12 @@
 #include "../include/Time.h"
 
 int main() {
-    // Пример использования класса Tree
     Tree tree;
-    tree.insert(5);
     tree.insert(3);
-    tree.insert(7);
-    tree.insert(1);
+    tree.insert(2);
+    tree.insert(2);
     tree.insert(4);
+    tree.insert(5);
     tree.insert(6);
     tree.insert(8);
 
@@ -41,11 +40,23 @@ int main() {
     // Измерение времени операций
     Time timer;
     timer.fillContainerAverageTime(tree, 1000);
+    timer.fillContainerAverageTime(tree, 10000);
+    timer.fillContainerAverageTime(tree, 100000);
     timer.fillVectorAverageTime(randomVectorInt, 1000);
+    timer.fillVectorAverageTime(randomVectorInt, 10000);
+    timer.fillVectorAverageTime(randomVectorInt, 100000);
     timer.searchAverageTime(tree, 1000);
+    timer.searchAverageTime(tree, 10000);
+    timer.searchAverageTime(tree, 100000);
     timer.addAndRemoveAverageTime(tree, 1000);
+    timer.addAndRemoveAverageTime(tree, 10000);
+    timer.addAndRemoveAverageTime(tree, 100000);
     timer.searchVectorAverageTime(randomVectorInt, 1000);
+    timer.searchVectorAverageTime(randomVectorInt, 10000);
+    timer.searchVectorAverageTime(randomVectorInt, 100000);
     timer.addAndRemoveVectorAverageTime(randomVectorInt, 1000);
+    timer.addAndRemoveVectorAverageTime(randomVectorInt, 10000);
+    timer.addAndRemoveVectorAverageTime(randomVectorInt, 100000);
 
     return 0;
 }
